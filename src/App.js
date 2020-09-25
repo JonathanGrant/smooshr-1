@@ -6,6 +6,7 @@ import ProjectModal from "./components/ProjectModal";
 import LoadProjectModal from "./components/LoadProjectModal";
 import GHPagesRedirect from "./components/GHPagesRedirect";
 import ShowApplyMappingsModal from "./components/ApplyMappingsModal";
+import SplitColumnModal from "./components/SplitColumnModal";
 import CodeExportModal from "./components/CodeExportModal";
 import DatasetPage from "./pages/DatasetPage";
 import ColumnPage from "./pages/ColumnPage";
@@ -32,6 +33,11 @@ function App() {
                         path="/project/:projectID/column/:columnID"
                         exact={true}
                         component={ColumnPage}
+                    />
+                    <Route
+                        path="/project/:projectID/split_column/:columnID"
+                        exact={true}
+                        component={SplitColumnModal}
                     />
                     <Route
                         path="/project/:projectID"
