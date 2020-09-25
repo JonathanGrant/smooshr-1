@@ -169,7 +169,8 @@ export default function ProjectPage(props) {
                   onClick={() => toggleSelectedColumn(mc.id)}
                   onUpdate={newName => changeMCName(mc, newName)}
                   onUnmerge={() => seperateMetaDataColumn(mc.id)}
-                  link={`/project/${project.id}/column/${mc.id}`}
+                  taxonomyLink={`/project/${project.id}/column/${mc.id}`}
+                  splitColumnsLink={`/project/${project.id}/split_column/${mc.id}`}
                   key={mc.id}
                 />
               ))}
