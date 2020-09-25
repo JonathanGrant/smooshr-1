@@ -10,7 +10,8 @@ export default function ColumnCard({
   onClick,
   onUpdate,
   onUnmerge,
-  link,
+  taxonomyLink,
+  splitColumnsLink
 }) {
   const totalUnique = fromColumns.reduce((tot, c) => tot + c.unique, 0);
   return (
@@ -35,10 +36,12 @@ export default function ColumnCard({
       ))}
       <div className="column-action-buttons">
         {fromColumns.length > 1 && (
-          <button onClick={onUnmerge}>Split Column</button>
+          <button onClick={onUnmerge}>Unmerge</button>
         )}
-        <Link className="work-on-taxonomy-button" to={link}>
-          <button>Work on taxonomy</button>
+        <Link className="work-on-taxonomy-button" to={splitColumnsLink}>
+          <button>Split column</button>
+        </Link>
+        <Link className="work-on-taxonomy-button" to={taxonomyLink}>
         </Link>
       </div>
     </div>
